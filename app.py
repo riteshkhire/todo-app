@@ -10,5 +10,18 @@ next_id = 1
 def index():
     return render_template('index.html', todos=todos)
 
+@app.route('/add', methods=['POST'])
+def add_todo():
+    global next_id
+    text = request.form.get('text', '').strip()
+    if text:
+        todos.append({
+            "id": next_id,
+            "text": text,
+            "completed": False
+        })
+        next_id += 1
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
