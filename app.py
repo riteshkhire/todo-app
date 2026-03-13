@@ -23,5 +23,11 @@ def add_todo():
         next_id += 1
     return redirect(url_for('index'))
 
+@app.route('/delete/<int:todo_id>', methods=['POST'])
+def delete_todo(todo_id):
+    global todos
+    todos = [t for t in todos if t['id'] != todo_id]
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
