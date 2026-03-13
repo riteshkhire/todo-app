@@ -11,6 +11,9 @@
           {% for todo in todos %}
               <li class="{{ 'completed' if todo.completed else '' }}">
                   {{ todo.text }}
+                  <form action="/delete/{{ todo.id }}" method="POST" style="display:inline">
+                      <button type="submit" class="btn-delete">Delete</button>
+                  </form>
               </li>
           {% else %}
               <li>No todos yet. Add one below!</li>

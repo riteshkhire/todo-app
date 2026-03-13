@@ -52,3 +52,14 @@ form {
   button:hover {
       background: #45a049;
   }
+
+.btn-delete {
+    background: #e74c3c;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
