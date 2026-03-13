@@ -29,5 +29,13 @@ def delete_todo(todo_id):
     todos = [t for t in todos if t['id'] != todo_id]
     return redirect(url_for('index'))
 
+@app.route('/toggle/<int:todo_id>', methods=['POST'])
+def toggle_todo(todo_id):
+    for todo in todos:
+        if todo['id'] == todo_id:
+            todo['completed'] = not todo['completed']
+            break
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)

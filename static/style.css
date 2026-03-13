@@ -63,3 +63,13 @@ form {
 .btn-delete:hover {
     background: #c0392b;
 }
+
+.btn-toggle {
+    background: #3498db;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.btn-toggle:hover {
+    background: #2980b9;
+}

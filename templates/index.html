@@ -10,6 +10,11 @@
       <ul id="todo-list">
           {% for todo in todos %}
               <li class="{{ 'completed' if todo.completed else '' }}">
+                  <form action="/toggle/{{ todo.id }}" method="POST" style="display:inline">
+                      <button type="submit" class="btn-toggle">
+                          {{ '✓' if todo.completed else '○' }}
+                      </button>
+                  </form>
                   {{ todo.text }}
                   <form action="/delete/{{ todo.id }}" method="POST" style="display:inline">
                       <button type="submit" class="btn-delete">Delete</button>
