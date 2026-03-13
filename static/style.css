@@ -25,3 +25,30 @@ body {
       color: #999;
   }
 
+form {                                                                                                                                            
+      display: flex;                                                                                                                              
+      gap: 10px;
+      margin-top: 20px;
+  }
+
+  form input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+  }
+
+  button {
+      padding: 8px 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  button:hover {
+      background: #45a049;
+  }

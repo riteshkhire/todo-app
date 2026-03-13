@@ -16,5 +16,14 @@
               <li>No todos yet. Add one below!</li>
           {% endfor %}
       </ul>
+      <form action="/add" method="POST">
+          <input
+              type="text"
+              name="text"
+              placeholder="What needs to be done?"
+              required
+          >
+          <button type="submit">Add Todo</button>
+      </form>
   </body>
   </html>
