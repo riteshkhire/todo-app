@@ -1,4 +1,4 @@
-<!DOCTYPE html>                                                                                                                                 
+<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -7,6 +7,14 @@
   </head>
   <body>
       <h1>My Todo List</h1>
-      <!-- Features will be added here -->
+      <ul id="todo-list">
+          {% for todo in todos %}
+              <li class="{{ 'completed' if todo.completed else '' }}">
+                  {{ todo.text }}
+              </li>
+          {% else %}
+              <li>No todos yet. Add one below!</li>
+          {% endfor %}
+      </ul>
   </body>
   </html>
